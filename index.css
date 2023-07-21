@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+*{
+    font-family: "Press Start 2P", cursive;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator{
+    width: 90vw;
+    height:90vh;
+    border: solid;
+    box-shadow: -0.4vw -0.4vh 0.4vw  ;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 4vw;
+    padding-block: 4vh;
+    justify-content: space-between;
+
+}
+.display{
+    height:30%;
+    width:100%;
+    border:  solid;
+}
+.keyboard{
+    border:  solid;
+    width:100%;
+    height:65%;
+
+}
+.keyboard button{
+  color: black;
+  width: 25%;
+}
+.delKeys {
+  height: 20%;
+ 
+
+}
+.delKeys button{
+  width: 50%;
+  height: 100%;
+}
+.numberPad{
+  height: 80%;
+  display: flex;
+ 
+}
+.keyPad{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 30em) {
+    html {
+      font-size: 125%;
+    }
+  }
+  
+  @media (min-width: 40em) {
+    html {
+      font-size: 150%;
+    }
+  }
+  
+  @media (min-width: 50em) {
+    html {
+      font-size: 175%;
+    }
+  }
+  
+  @media (min-width: 60em) {
+    html {
+      font-size: 200%;
+    }
+  }
