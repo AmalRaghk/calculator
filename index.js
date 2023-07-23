@@ -9,6 +9,16 @@ const keys=["C","AC","=","%","X","/","+","-","0","9","8","7","6","5","4","3","2"
 let stack=[null,null,null];
 let temp="";
 let pos=0;
+const displayfunction=()=>{
+    secondary.innerHTML=''
+    stack.forEach(a=>{
+        if(a!=null){
+            secondary.innerHTML+=a;
+        }
+    }
+    )
+}
+//stack.addEventListner('change',displayfunction);
 function mathsfunctions(operation){
     if(operation==="+"){
         return stack[0]+stack[2];
@@ -33,9 +43,11 @@ function mathsfunctions(operation){
 
 }
 function operations(operation){
+    
    
     if (operation==="C"){
         stack[pos]=null;
+        
     }
     else if(operation.charCodeAt(0)>=48 && operation.charCodeAt(0)<=57){
         temp+=operation;
@@ -44,9 +56,12 @@ function operations(operation){
     }
     else if(operation==="AC"){
         stack=[null,null,null];
+        pos=0;
+        secondary.innerHTML='';
     }
     else if(operation==="="){
         console.log(mathsfunctions(stack[1]));
+    
     }
     else{
         if (pos!=0){
@@ -60,6 +75,7 @@ function operations(operation){
     }
 
     console.log(stack);
+    displayfunction();
 }
 function keysgen() {
     const keyPad = document.createElement('div');
