@@ -35,6 +35,9 @@ body{
     border-radius: 2vw;
     color: black;
 }
+.primary{
+  color: black;
+}
 .secondary{
   height: 40%;
   width: 100%;

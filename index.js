@@ -26,7 +26,7 @@ function mathsfunctions(operation){
     else if(operation==="-"){
         return stack[0]-stack[2];
     }
-    else if(operation==="*"){
+    else if(operation==="X"){
         return stack[0]*stack[2];
     }
     else if(operation==="%"){
@@ -47,6 +47,7 @@ function operations(operation){
    
     if (operation==="C"){
         stack[pos]=null;
+        pos--;
         
     }
     else if(operation.charCodeAt(0)>=48 && operation.charCodeAt(0)<=57){
@@ -58,19 +59,20 @@ function operations(operation){
         stack=[null,null,null];
         pos=0;
         secondary.innerHTML='';
+        temp='';
+        primary.innerHTML='';
     }
     else if(operation==="="){
-        console.log(mathsfunctions(stack[1]));
-    
+        primary.innerHTML=mathsfunctions(stack[1]);
+        stack=[null,null,null];
+        stack[0]=parseFloat(primary.innerHTML);
     }
     else{
-        if (pos!=0){
-            return
-        }
-        pos=1;
-        stack[pos]=operation;
-        temp=''
+       if (pos !=2 || pos!=0){
+        stack[1]=operation;
         pos=2;
+        temp='';
+       }
 
     }
 
