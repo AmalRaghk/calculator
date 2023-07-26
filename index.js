@@ -13,7 +13,7 @@ const displayfunction=()=>{
     secondary.innerHTML=''
     stack.forEach(a=>{
         if(a!=null){
-            secondary.innerHTML+=a;
+            secondary.innerHTML+=(" "+a);
         }
     }
     )
@@ -47,12 +47,13 @@ function operations(operation){
    
     if (operation==="C"){
         stack[pos]=null;
-        pos--;
+        temp='';
+
         
     }
     else if(operation.charCodeAt(0)>=48 && operation.charCodeAt(0)<=57){
         temp+=operation;
-        stack[pos]=parseInt(temp);
+        stack[pos]=parseFloat(temp);
         
     }
     else if(operation==="AC"){
@@ -66,6 +67,7 @@ function operations(operation){
         primary.innerHTML=mathsfunctions(stack[1]);
         stack=[null,null,null];
         stack[0]=parseFloat(primary.innerHTML);
+        temp=''
     }
     else{
        if (pos !=2 || pos!=0){
