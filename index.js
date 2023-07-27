@@ -44,17 +44,23 @@ function mathsfunctions(operation){
 }
 function operations(operation){
     
-   
     if (operation==="C"){
         stack[pos]=null;
         temp='';
+        primary.innerHTML='';
 
         
     }
     else if(operation.charCodeAt(0)>=48 && operation.charCodeAt(0)<=57){
+        if(primary.innerHTML!=''){
+            pos=0;
+            temp+=operation
+            stack[pos]=parseFloat(temp);
+        }
+        else{
         temp+=operation;
         stack[pos]=parseFloat(temp);
-        
+        }
     }
     else if(operation==="AC"){
         stack=[null,null,null];
@@ -67,14 +73,21 @@ function operations(operation){
         primary.innerHTML=mathsfunctions(stack[1]);
         stack=[null,null,null];
         stack[0]=parseFloat(primary.innerHTML);
-        temp=''
+        temp='';
     }
     else{
+        if(stack[2]== null){
        if (pos !=2 || pos!=0){
         stack[1]=operation;
         pos=2;
         temp='';
+        primary.innerHTML='';
        }
+    }
+    else{
+        return
+
+    }
 
     }
 

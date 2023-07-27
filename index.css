@@ -97,4 +97,9 @@ body{
     html {
       font-size: 200%;
     }
+    .calculator{
+      width:25vw;
+      padding: 2vw;
+      border-radius: 2vw;
+    }
   }
