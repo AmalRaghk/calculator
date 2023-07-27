@@ -34,14 +34,25 @@ body{
     background-color: white;
     border-radius: 2vw;
     color: black;
+
 }
 .primary{
+  padding: 2vh;
   color: black;
+  font-size: 5vw;
+  display: flex;
+  align-items:flex-end;
+  justify-content: right;
 }
 .secondary{
+  display: flex;
+  align-items: end;
+  justify-content: right;
+  padding: 2vh;
   height: 40%;
   width: 100%;
   color: black;
+  font-size: 5vw;
 }
 .keyboard{
     
@@ -79,17 +90,27 @@ body{
     html {
       font-size: 125%;
     }
+    .secondary {
+      font-size: 10rem;
+    }
   }
   
   @media (min-width: 40em) {
     html {
       font-size: 150%;
     }
+   
   }
   
   @media (min-width: 50em) {
     html {
       font-size: 175%;
+    }
+    .secondary {
+      font-size: 1vw;
+    }
+    .primary{
+      font-size: 2vw;
     }
   }
   
@@ -101,5 +122,11 @@ body{
       width:25vw;
       padding: 2vw;
       border-radius: 2vw;
+    }
+    .secondary{
+      font-size: 1vw;
+    }
+    .primary{
+      font-size: 2vw;
     }
   }
