@@ -5,7 +5,7 @@ const primary=document.querySelector('.primary');
 const secondary=document.querySelector('.secondary')
 const delKeys=document.querySelector('.delKeys');
 const numberPad=document.querySelector('.numberPad');
-const keys=["C","AC","=","%","X","/","+","-","0","9","8","7","6","5","4","3","2","1"]
+const keys=["C","AC","=",".","X","/","+","-","0","9","8","7","6","5","4","3","2","1"]
 let stack=[null,null,null];
 let temp="";
 let pos=0;
